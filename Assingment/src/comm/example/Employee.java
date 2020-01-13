@@ -73,8 +73,7 @@ public int getEmpSalary() {
 public void setEmpSalary(int empSalary) {
 	this.empSalary = empSalary;
 }
-@override
-public int compare(Employee o1, Employee o2) {
+/*public int compare(Employee o1, Employee o2) {
 	if(o1.getEmpSalary()>o2.getEmpSalary())
 		{
 		return 1;
@@ -83,11 +82,23 @@ public int compare(Employee o1, Employee o2) {
 		
 	return -1;
 	}
+}*/
+public int compareTo(Employee e)
+{
+	if(empSalary==e.empSalary)
+		return 0;
+	else if(empSalary>e.empSalary)
+		return 1;
+	else
+		return -1;
 }
 
 @Override
 public String toString() {
-	return "%-15s %-30s %-30s %-20s %-10s %-10s\n","Employee ID","Name,"dept",new SimpleDateFormat("MM/dd/yyyy"),"Date Of Joining","Employee Age","Employee ID";	
+	//return "%-15s %-30s %-30s %-20s %-10s %-10s\n","Employee ID","Name,"dept",new SimpleDateFormat("MM/dd/yyyy"),"Date Of Joining","Employee Age","Employee ID";	
+
+	System.out.format("%-15s %-30s %-30s %-20s %-10s %-10s\n",empId,empName,empDept,new SimpleDateFormat("MM/dd/yyyy").format(DateOfJoining),empAge,empSalary);
+	return "";
 }
 
 }
