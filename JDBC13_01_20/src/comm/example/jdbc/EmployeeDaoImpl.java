@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import comm.example.h2.connection.data.MySqlConnectionFactory;
+
 public class EmployeeDaoImpl implements EmployeeDao {
 
 	private MySqlConnectionFactory facctory = null;
