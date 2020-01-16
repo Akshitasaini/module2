@@ -15,7 +15,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	private MyConnectionFactory factory=null;
 	private Connection connection=null;
 	PreparedStatement pStatement=null;
-	static Logger logger=Logger.getLogger("com.mycompany.jdbcmaven.CustomerDaoImpl");
+	static Logger logger=Logger.getLogger("comm.example.h2.connection.data.CustomerDaoImpl");
 
 	private Customer customer=null;
 	{
@@ -95,6 +95,13 @@ public class CustomerDaoImpl implements CustomerDao {
 		pStatement.executeUpdate();
 		return customer;
 	
+	}
+	@Override
+	public void deleteCustomer(String uId) throws SQLException {
+		pStatement =connection.prepareStatement("delete from customer where uid=?");
+		pStatement.setString(1, uId);
+		pStatement.executeUpdate();
+		
 	}
 	
 	}
