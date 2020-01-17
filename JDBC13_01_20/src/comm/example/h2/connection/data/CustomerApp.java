@@ -39,7 +39,9 @@ public class CustomerApp {
 				break;
 			case 0:
 				System.exit(0);
-				
+			/*case 2:
+				System.out.println("All created customer");
+				Customer customer=service.createCuastomer(fName, lName, email);*/
 			default:
 				System.out.println("invalid choice");
 				break;
