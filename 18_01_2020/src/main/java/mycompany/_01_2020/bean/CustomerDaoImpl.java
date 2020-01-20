@@ -45,6 +45,22 @@ public class CustomerDaoImpl implements CustomerDao {
 		pStatement.executeUpdate();
 		return customer;
 	}
+	
+	@Override
+	public Customer updateCustomer(Customer customer) throws SQLException {
+		// TODO Auto-generated method stub
+		pStatement=connection.prepareStatement("update customer "
+				+ "set first_name=? , "
+				+ "last_name=?, "
+				+ "email=?"
+				+ " where uid=?");
+		pStatement.setString(2, customer.getFirstName());
+		pStatement.setString(3, customer.getLastName());
+		pStatement.setString(4, customer.getEmail());
+		pStatement.setString(1,customer.getUId());
+		pStatement.executeUpdate();
+		return customer;
 		
+	}
 	}
 
