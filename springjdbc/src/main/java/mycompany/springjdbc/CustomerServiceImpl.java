@@ -31,9 +31,9 @@ public List<Customer> getCustomerById(String uId) throws SQLException {
 
 
 @Override
-public int updateCustomerById(Customer customer) throws SQLException {
+public Customer updateCustomerById(Customer customer) throws SQLException {
 	
-	return 0;
+	return customer;
 }
 
 

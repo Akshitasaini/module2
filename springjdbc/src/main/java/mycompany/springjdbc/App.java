@@ -11,6 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
 
+
 @Component
 public class App 
 {
@@ -19,7 +20,7 @@ public class App
     {
 ClassPathXmlApplicationContext context=null;
 BufferedReader br=null;
-
+Customer customer=null;
     	CustomerService service = null;	
     
     try {
@@ -86,7 +87,7 @@ finally {
 				});
 			}
 			break;
-	/*	case 4:
+		case 4:
 			System.out.print(" UID : ");
 			uId=br.readLine().toString();
 			l=service.getCustomerById(uId);
@@ -108,7 +109,7 @@ finally {
 				customer=service.updateCustomerById(c);
 				System.out.println("customer updated:" +customer);
 			}
-*/
+
 			
 		default:
 			break;
