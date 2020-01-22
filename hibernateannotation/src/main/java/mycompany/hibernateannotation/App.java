@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+     
 public class App 
 {
 	
@@ -32,7 +34,8 @@ public class App
     		System.out.println("4. delete person.");
     		System.out.print("enter your choice>> ");
     		choice=Integer.parseInt(br.readLine());
-    		switch (choice) {
+    		Interger id;
+			switch (choice) {
  			case 1:
  				System.out.print("first name>> ");
  				firstName=br.readLine();
@@ -47,11 +50,31 @@ public class App
  					System.out.println(p);
  				});
  				break;
+ 			case 3:
+ 				System.out.print("id>> ");
+ 				uId=br.readLine();
+ 				l=service.getPersonByid(id);
+ 				if(l.isEmpty())
+ 				{
+ 					System.out.println("Person not found");
+ 				}
+ 				else
+ 				{
+ 					Person p =l.get(0);
+ 					System.out.print(" Name: ");
+ 					name=br.readLine().toString();
+ 					
+ 					p.setName(name);
+ 					
+ 					person=service.updatePerson(uId);
+ 					System.out.println("person updated:" +person);
+ 				}
+ 				break;
  			
  			case 4:
- 				System.out.println("uid>>");
- 				uId=br.readLine();
- 				service.deletePerson(1);
+ 				System.out.println("id>>");
+ 				id=br.readLine();
+ 				service.deletePerson(id);
  			default:
  	 				break;
  	 			}
