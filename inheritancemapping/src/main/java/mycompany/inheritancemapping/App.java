@@ -20,7 +20,7 @@ public class App
 					.addAnnotatedClass(PermanentEmployee.class).buildSessionFactory()
 					.getCurrentSession();
     	  Employee Employee1 = new Employee("Sarah","Antony",50000);
-    	  Employee Employee2 = new ContractEmployee("Sanna","Ali",30000,1000,2.3);
+    	  Employee Employee2 = new ContractEmployee("akshita","saini",34450,1440,1.3);
     	  Employee Employee3 = new PermanentEmployee("Shharukh","khan",282880,10);
           session.getTransaction().begin();
           session.save(Employee1);

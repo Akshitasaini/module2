@@ -34,7 +34,7 @@ public class App
     		System.out.println("4. delete person.");
     		System.out.print("enter your choice>> ");
     		choice=Integer.parseInt(br.readLine());
-    		Interger id;
+    		
 			switch (choice) {
  			case 1:
  				System.out.print("first name>> ");
