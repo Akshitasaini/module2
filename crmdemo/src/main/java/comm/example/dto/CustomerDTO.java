@@ -13,6 +13,7 @@ import lombok.Setter;
 @Setter
 
 public class CustomerDTO {
+	private String uId;
 	private String fristName;
 	private String LastName;
 	private String email;

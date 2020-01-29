@@ -1,8 +1,13 @@
 package comm.example.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import org.hibernate.Session;
+
+
 
 import comm.example.model.Customer;
 import comm.example.util.CustomerUtil;
@@ -23,6 +28,11 @@ public class CustomerDaoImpl implements CustomerDao {
 		entityManager.persist(customer);
 		entityManager.getTransaction().commit();
 		return customer;
+	}
+	@Override
+	public List<Customer> getAllCustomer() {
+		Query query = entityManager.createQuery("from Customer",Customer.class);
+		return query.getResultList();
 	}
 
 

@@ -1,5 +1,7 @@
 package comm.example.service;
 
+import java.util.List;
+
 import comm.example.dao.CustomerDao;
 import comm.example.dao.CustomerDaoImpl;
 import comm.example.model.Customer;
@@ -15,4 +17,11 @@ public class CustomerServiceImpl implements CustomerService {
 
 		return dao.createCustomer(customer);
 	}
+
+	@Override
+	public List<Customer> getAllCustomer() {
+		// TODO Auto-generated method stub
+		return dao.getAllCustomer();
+	}
+
 }

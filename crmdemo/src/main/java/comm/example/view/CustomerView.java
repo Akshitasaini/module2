@@ -13,13 +13,7 @@ import comm.example.model.Customer;
 
 public class CustomerView extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-   
-    public CustomerView() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	
+ 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doProcess(request, response);
@@ -34,6 +28,7 @@ public class CustomerView extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		Customer c=(Customer)request.getAttribute("SUCCESS");
-		out.println("customer "+c.getFristName()+"has been added with id"+c.getId());
+		out.println("<table border='1'><tr><td>Customer ID</td><td>First Name</td><td>Last Name</td><td>Email</td></tr>");
+		out.println("<tr><td>"+c.getUId()+"</td><td>"+c.getFristName()+"</td><td>"+c.getLastName()+"</td><td>"+c.getEmail()+"</td></tr></table>");
 	}
 }

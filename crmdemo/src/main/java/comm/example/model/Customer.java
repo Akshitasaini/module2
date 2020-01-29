@@ -19,6 +19,7 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	private String uId;
 	@Column(name = "first_name")
 	private String fristName;
 	@Column(name = "last_name")

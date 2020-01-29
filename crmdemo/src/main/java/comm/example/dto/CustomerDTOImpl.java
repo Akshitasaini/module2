@@ -7,5 +7,7 @@ import comm.example.model.Customer;
 @Mapper
 public interface CustomerDTOImpl {
 
-	public Customer customerDtoToCustomer(CustomerDTO dto);
+	public Customer customerDTOToCustomer(CustomerDTO dto);
+	public CustomerDTO customertoCustomerDTO(Customer customer);
+	
 }
