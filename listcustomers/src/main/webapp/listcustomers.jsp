@@ -26,6 +26,8 @@ crossorigin="anonymous">
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Email</th>
+					<th>Action</th>
+				    <th>Action</th>
 				</tr>
 				<c:forEach var="tempCustomer" items="${customers}">
 				<c:url var="updateUrl" value="updatecustomer.do">
@@ -37,6 +39,7 @@ crossorigin="anonymous">
 						<td> ${tempCustomer.lastName} </td>
 						<td> ${tempCustomer.email} </td>
 						<td><a href="${ updateUrl}">Update</a></td>
+						<td><a href="${ deleteUrl}">Delete</a></td>
 					</tr>
 				
 				</c:forEach>

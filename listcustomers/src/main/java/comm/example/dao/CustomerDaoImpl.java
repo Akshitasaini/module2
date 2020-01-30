@@ -46,5 +46,12 @@ public class CustomerDaoImpl implements CustomerDao {
 		entityManager.getTransaction().commit();
 		return c;
 	}
+	@Override
+	public void delete(Customer customer) {
+		entityManager.getTransaction().begin();
+		entityManager.remove(customer);
+		entityManager.getTransaction().commit();
+		
+	}
 	
 }
