@@ -1,0 +1,4 @@
+spring:  application:    name: spring.jpa
+  h2:
+    console:
+      enabled: true      path: /console      settings:        trace: true     
