@@ -41,5 +41,35 @@ public class StudentServiceImpl implements StudentService {
 		// TODO Auto-generated method stub
 		return studentDao.save(student);
 	}
+	/*@Override
+	public Student updateStudent(Student student) {
+		// TODO Auto-generated method stub
+		return studentDao.save(student);
+	}*/
+	@Override
+	public void deleteStudentById(Integer studentId) {
+		// TODO Auto-generated method stub
+		studentDao.deleteById(studentId);
+	}
+	@Override
+	public void deleteAll() {
+		// TODO Auto-generated method stub
+		studentDao.deleteAll();
+	}
+	@Override
+	public List<Student> findByFirstName(String firstName) {
+		// TODO Auto-generated method stub
+		return studentDao.findByFirstName(firstName);
+	}
+	@Override
+	public List<Student> findByLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return studentDao.findByLastName(lastName);
+	}
+	@Override
+	public List<Student> findByFirstNameAndLastName(String firstName, String lastName) {
+		// TODO Auto-generated method stub
+		return studentDao.findByFirstNameAndLastName(firstName, lastName);
+	}
 
 }

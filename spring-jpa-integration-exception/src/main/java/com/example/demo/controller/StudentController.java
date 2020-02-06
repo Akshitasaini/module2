@@ -6,10 +6,12 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -64,8 +66,37 @@ public class StudentController {
 	}
 
 	@PostMapping("/students")
-	public Student createstudent(@RequestBody Student student) {
+	public Student createStudent(@RequestBody Student student) {
 student.setStudentId(0);
 return studentService.createStudent(student);
 }
+	@PutMapping("/students")
+	public Student updateStudent(@RequestBody Student student) {
+		return studentService.createStudent(student);
+	}
+	@DeleteMapping("/students/{studentId}")
+	public void deleteById(@PathVariable Integer studentId)
+	{
+		studentService.deleteStudentById(studentId);
+	}
+	@DeleteMapping("/students")
+	public void deleteAll()
+	{
+		studentService.deleteAll();
+	}
+	@GetMapping("/students/findByFirstName/{firstName}")
+	public List<Student> findByFirstName(@PathVariable String firstName)
+	{
+		return studentService.findByFirstName(firstName);
+	}
+	@GetMapping("/students/findByLastName/{lastName}")
+	public List<Student> findByLastName(@PathVariable String lastName)
+	{
+		return studentService.findByLastName(lastName);
+	}
+	@GetMapping("/students/findByFisrtNameAndLastName/{firstName}/{lastName}")
+	public List<Student> findByName(@PathVariable String firstName,@PathVariable String lastName)
+	{
+		return studentService.findByFirstNameAndLastName(firstName, lastName);
+	}
 }
