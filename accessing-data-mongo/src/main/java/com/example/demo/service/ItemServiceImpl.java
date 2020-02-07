@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,11 +33,25 @@ public Item createItem(Item item) {
 	return itemRepository.insert(item);
 }
 
-/*@Override
+@Override
 @Transactional
-public Item findItemById(String itemId) {
+public Optional<Item> findItemById(String itemId) {
+	Optional<Item> item = itemRepository.findById(itemId);
+	return item;
+}
+
+@Override
+@Transactional
+public void deleteItemById(String itemId) {
+	itemRepository.deleteById(itemId);
+	
+}
+
+@Override
+@Transactional
+public void deleteAll() {
 	// TODO Auto-generated method stub
-	return itemRepository.findItemById(itemId);
-}*/
+	itemRepository.deleteAll();
+}
 
 }
