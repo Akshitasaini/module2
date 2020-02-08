@@ -4,19 +4,24 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="form.css">
 <title>Insert title here</title>
+<style>
+div {
+  background-image: url('wp45992.jpg');
+}
+</style>
 </head>
 <body>
 
 	<form class="form-incline" action="/action_page.php">
 
-		<div>
+	
 			<div class="col-50">
 				<h3>Giftcard Amount:</h3>
 				<label for="amount"><i class="fa fa-envelope"></i> INR</label> <input
 					type="number" id="INR" name="INR" placeholder="$$$" min="0"
 					max="100"> <label for="amount"><i
-					class="fa fa-envelope"></i> PAISA</label> <input type="number" id="paisa"
-					name="PAISA" placeholder=".$$$" min="0" max="100">
+					class="fa fa-envelope"></i> Paisa</label> <input type="number" id="paisa"
+					name="Paisa" placeholder=".$$$" min="0" max="100">
 
 				<h3>Recipient Name:</h3>
 				<label for="firstName"><i class="fa fa-envelope"></i> First
@@ -29,11 +34,10 @@
 				<label for="fname"><i class="fa fa-user"></i> Full Name</label> <input
 					type="text" id="fname" name="firstname" placeholder="John">
 				<br>
+   <fieldset style="background:#e1eff2;">
+        <legend style="padding:20px 0; font-size:20px;">Address:</legend>
 
-				<fieldset>
-					<legend>Address</legend>
-
-					<div class="form-group">
+					
 						Country: <select name="country" class="countries" id="countryId">
 							<option value="">country</option>
 
@@ -51,14 +55,14 @@
 							placeholder=" 15th Street"> <label for="pincode">PinCode</label>
 						<input type="number" id="pincode" name="pincode"
 							placeholder="000000" min="6" max="6">
-					</div>
+				
 				
 </fieldset>
 
 			</div>
 
-			<br> <label for="phoneNumber">Phone Number</label> 
-			<select name="" id="" size="1"  >
+			<br><br><br> <label for="phoneNumber">Phone Number</label> 
+			<select name="" id="" style="width: 120px;" >
 			<option data-countryCode="GB" value="44" Selected>UK (+44)</option>
 	<option data-countryCode="US" value="1">USA (+1)</option>
 
@@ -276,18 +280,18 @@
 		<option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
 		<option data-countryCode="ZM" value="260">Zambia (+260)</option>
 		<option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-	</optgroup>
-</select> <input
+	
+</select> <input class="inputs" type="text" maxlength="1" 
 				type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"  placeholder="">
-			<input type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"placeholder="" >
-			<input type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"  placeholder="">
-			<input type="number" id="phoneNumber" name="phoneNumber" style="width:15px;" placeholder="">
-			<input type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"  placeholder="">
-			<input type="number" id="phoneNumber" name="phoneNumber" style="width:15px;" placeholder="">
-			<input type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"  placeholder="">
-			<input type="number" id="phoneNumber" name="phoneNumber" style="width:15px;" placeholder="">
-			<input type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"  placeholder="">
-			<input type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"  placeholder="">
+			<input class="inputs" type="text" maxlength="1"  type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"placeholder="" >
+			<input class="inputs" type="text" maxlength="1"  type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"  placeholder="">
+			<input class="inputs" type="text" maxlength="1"  type="number" id="phoneNumber" name="phoneNumber" style="width:15px;" placeholder="">
+			<input class="inputs" type="text" maxlength="1"  type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"  placeholder="">
+			<input class="inputs" type="text" maxlength="1"  type="number" id="phoneNumber" name="phoneNumber" style="width:15px;" placeholder="">
+			<input class="inputs" type="text" maxlength="1"  type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"  placeholder="">
+			<input class="inputs" type="text" maxlength="1"  type="number" id="phoneNumber" name="phoneNumber" style="width:15px;" placeholder="">
+			<input class="inputs" type="text" maxlength="1"  type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"  placeholder="">
+			<input class="inputs" type="text" maxlength="1"  type="number" id="phoneNumber" name="phoneNumber" style="width:15px;"  placeholder="">
 
 			<br> <label for="email">Email</label> <input
 				pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
@@ -295,8 +299,8 @@
 				data-rel="popup"
 				class="ui-btn ui-icon-action ui-btn-icon-left ui-corner-all">Place
 				Order</a>
-		</div>
-
+		
+<script src="email-validation.js"></script>
 	</form>
 </body>
 </html>
